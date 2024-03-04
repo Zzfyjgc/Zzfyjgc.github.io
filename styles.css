@@ -1,0 +1,240 @@
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+/* 导航栏样式 */
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+}
+
+/* 英雄区域 */
+.hero {
+    background: #007bff;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #0069d9;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+/* 内容区域样式 */
+section {
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.nav-brand img {
+    height: 50px; /* 根据实际logo大小调整 */
+}
+
+.nav-login a {
+    color: white;
+    margin-left: 20px;
+}
+
+/* 滑动图片界面样式 */
+.slider {
+    overflow: hidden;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slides img {
+    min-width: 100%;
+    height: auto;
+}
+nav {
+    background-color: #005a87;
+    color: #fff;
+    padding: 10px 20px;
+}
+/* 活动时间安排表样式 */
+.schedule-table {
+    margin-top: 20px;
+}
+
+.schedule-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 12px;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #28a745;
+}
+
+.btn:not(.btn-primary) {
+    background-color: #ff0000;
+}
+/* 模态框基本样式 */
+.modal {
+    display: none; /* 默认隐藏 */
+    position: fixed; /* 固定位置 */
+    z-index: 1000; /* 置于顶层 */
+    left: 0;
+    top: 0;
+    width: 100%; /* 宽度占满屏幕 */
+    height: 100%; /* 高度占满屏幕 */
+    overflow: auto; /* 超出滚动 */
+    background-color: rgba(0,0,0,0.6); /* 半透明背景 */
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto; /* 水平居中 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%; /* 宽度 */
+    max-width: 450px; /* 最大宽度 */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    border-radius: 10px; /* 圆角 */
+}
+
+/* 添加动画效果 */
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.close-btn {
+    color: #aaaaaa;
+    float: right;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 表单样式 */
+.modal input[type=text], .modal input[type=password], .modal input[type=email] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px; /* 圆角输入框 */
+}
+
+/* 按钮样式 */
+.modal button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 5px; /* 圆角按钮 */
+}
+
+.modal button:hover {
+    opacity: 0.8;
+}
+
+/* 标题样式 */
+.modal h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}

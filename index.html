@@ -1,36 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>example1.3</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>西湖论剑·数字安全大会</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 假设有一个样式表 -->
 </head>
 <body>
-<article>
+<header>
+    <!-- 登录模态框 -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>登录</h2>
+            <form id="loginForm">
+                <input type="email" placeholder="邮箱" required>
+                <input type="password" placeholder="密码" required>
+                <button type="submit">登录</button>
+            </form>
+        </div>
+    </div>
 
-        <h1 >
-            万维网之父获图灵奖
-        </h1>
-        <img src="tim.png" id="tim"/>
+    <!-- 注册模态框 -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>注册</h2>
+            <form id="registerForm">
+                <input type="text" placeholder="用户名" required>
+                <input type="email" placeholder="邮箱" required>
+                <input type="password" placeholder="密码" required>
+                <button type="submit">注册</button>
+            </form>
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-brand">
+            <a href="#home"><img src="logo.png" alt="大会Logo" style="height: 50px;"></a> <!-- 假设logo图片文件名为logo.png -->
+        </div>
 
 
+        <ul>
+            <li><a href="#home">首页</a></li>
+            <li><a href="#about">大会介绍</a></li>
+            <li><a href="#schedule">活动安排</a></li>
+            <li><a href="#exhibitors">展商展览</a></li>
+            <li><a href="#achievements">成果展示</a></li>
+            <li><a href="#downloads">资料下载</a></li>
+            <li><a href="#news">新闻资讯</a></li>
+            <li><a href="#contact">联系我们</a></li>
+        </ul>
+        <div class="nav-login">
+            <a href="#login">登录</a> / <a href="#register">注册</a>
+        </div>
+    </nav>
+</header>
 
-        <p>
-            蒂姆·伯纳斯-李 （Tim Berners-Lee）——这位在计算机界留名青史的大人物在今天又获得了一项顶级荣誉，他在今天拿下了2016年的图灵奖。
-        </p>
-        <p>
-            如同很多专项领域的最高奖项一样，图灵奖也被誉为计算机领域的诺贝尔奖，这个奖项每年由计算机协会颁发，旨在奖励那些为计算机的发展做出重要贡献的个人。目前，图灵奖的奖金为100万美元，由Google公司提供。
-        </p>
-        <p>
-            在颁奖词中，图灵奖官方写道：“蒂姆·伯纳斯-李爵士于1989年发明了万维网，设想了一个全球信息空间，其中可以用统一的名称区分不同的文件和其他网络资源，可以用标准方式检索文档和资源，并且可以通过超文本链接连接到不同文档的位置。”
-        </p>
+<section id="home">
+    <div class="hero">
+        <h1>欢迎来到西湖论剑·数字安全大会</h1>
+        <p>探索最新的数字安全技术，与行业领导者一起前进。</p>
+        <a href="#register" class="btn-primary">立即报名</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2>大会介绍</h2>
+    <p>西湖论剑·数字安全大会是国内领先的信息安全大会，集合了政府机构、公安部门、科研单位等行业精英。</p>
+</section>
+<div class="slider">
+    <div class="slides">
+        <img src="lunbo1.png" alt="大会图片1">
+        <img src="lunbo2.png" alt="大会图片2">
+        <img src="lunbo3.png" alt="大会图片3">
+        <!-- 更多图片 -->
+    </div>
+</div>
+<p>----简介：西湖论剑·数字安全大会作为链接产、教、研的平台，自2012年创办，是国内首个已举办十一周年的网络安全大会，2023年西湖论剑网络安全大会品牌升级，更名为西湖论剑·数字安全大会（以下简称“西湖论剑”）。十一届以来，大会线下参会嘉宾累计超过10000人次，线上直播观看累计超过2500万人次，已成为国内网络安全领域的一张“金名片”。历届大会期间，国家部委、省市领导，院士、知名专家和优秀企业代表齐聚杭州，共商数字时代的安全之道。西湖论剑参加的用户群体主要包含：政府机构、公安部门、信息安全科研单位、央企、金融、运营商、互联网、军工各行业信息安全决策人员、信息安全主管、CIO、媒体等。</p>
+
+<section id="schedule">
+    <h2>活动安排</h2>
+    <p>查看我们精彩纷呈的活动日程，不错过任何一场精彩演讲和展示。</p>
+    <div class="schedule-table">
+        <table>
+            <thead>
+            <tr>
+                <th>时间</th>
+                <th>活动名称</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>2024-03-10 10:00</td>
+                <td>开幕式</td>
+                <td>已结束</td>
+                <td><a href="#replay1" class="btn">观看回放</a></td>
+            </tr>
+            <tr>
+                <td>2024-03-11 14:00</td>
+                <td>安全技术分享</td>
+                <td>进行中</td>
+                <td><a href="#live2" class="btn btn-primary">进入直播</a></td>
+            </tr>
+            <tr>
+                <td>2024-03-12 09:00</td>
+                <td>闭幕式</td>
+                <td>未开始</td>
+                <td><a href="#subscribe3" class="btn">订购</a></td>
+            </tr>
+            <!-- 更多活动 -->
+            </tbody>
+        </table>
+    </div>
+</section>
 
 
-</article>
+<section id="exhibitors">
+    <h2>展商展览</h2>
+    <img src="zhanshang1.png">
+    <img src="zhanshang2.png">
+    <p>探索参展商的创新产品和解决方案。</p>
+</section>
 
-<h2>
+<section id="achievements">
+    <h2>成果展示</h2>
+    <p>了解本次大会发布的新产品和新成果。</p>
+</section>
 
-</h2>
+<section id="downloads">
+    <h2>资料下载</h2>
+    <p>下载大会嘉宾的精彩演讲PPT和相关资料。</p>
+</section>
+
+<section id="news">
+    <h2>新闻资讯</h2>
+    <p>获取大会的最新消息和媒体报道。</p>
+</section>
+
+<section id="contact">
+    <h2>联系我们</h2>
+    <p>有任何问题或建议，请联系我们。</p>
+</section>
+
+<footer>
+    <p>&copy; 2024 西湖论剑·数字安全大会。保留所有权利。</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        let currentIndex = 0;
+        const slides = document.querySelector('.slides');
+        const images = slides.querySelectorAll('img');
+        const totalImages = images.length;
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }, 3000); // 每3秒滑动到下一张图片
+    });
+    var loginModal = document.getElementById('loginModal');
+    var registerModal = document.getElementById('registerModal');
+
+    // 获取打开模态框的按钮元素
+    var loginBtn = document.querySelector('.nav-login a[href="#login"]');
+    var registerBtn = document.querySelector('.nav-login a[href="#register"]');
+
+    // 获取关闭模态框的按钮元素
+    var closeLogin = document.querySelector('#loginModal .close-btn');
+    var closeRegister = document.querySelector('#registerModal .close-btn');
+
+    // 点击按钮打开模态框
+    loginBtn.onclick = function() {
+        loginModal.style.display = "block";
+    }
+    registerBtn.onclick = function() {
+        registerModal.style.display = "block";
+    }
+
+    // 点击(x)关闭模态框
+    closeLogin.onclick = function() {
+        loginModal.style.display = "none";
+    }
+    closeRegister.onclick = function() {
+        registerModal.style.display = "none";
+    }
+
+    // 点击模态框外部时关闭模态框
+    window.onclick = function(event) {
+        if (event.target == loginModal) {
+            loginModal.style.display = "none";
+        } else if (event.target == registerModal) {
+            registerModal.style.display = "none";
+        }
+    }
+</script>
 </body>
 </html>
