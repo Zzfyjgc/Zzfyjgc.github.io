@@ -1,203 +1,44 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title></title>
-
-    <link rel="stylesheet" href="styles.css"> <!-- 假设有一个样式表 -->
+    <title >家乡发展调研问卷</title>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-<header>
-    <!-- 登录模态框 -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>登录</h2>
-            <form id="loginForm">
-                <input type="email" placeholder="邮箱" required>
-                <input type="password" placeholder="密码" required>
-                <button type="submit">登录</button>
-            </form>
-        </div>
-    </div>
+    <div>
+    <h1 style="color: skyblue; font-size: 40px;">家乡发展调研问卷</h1>
+    <p>光阴似箭，日月如梭,时代在变迁，家乡在变化，在君之心中，对家乡变化有何感务呢？</p>
+    <form id="surveyForm" action="submit.php" method="post">
+        <label for="name">君之名：</label>
+        <input type="text" id="name" name="name" required><br><br>
 
-    <!-- 注册模态框 -->
-    <div id="registerModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h2>注册</h2>
-            <form id="registerForm">
-                <input type="text" placeholder="用户名" required>
-                <input type="email" placeholder="邮箱" required>
-                <input type="password" placeholder="密码" required>
-                <button type="submit">注册</button>
-            </form>
-        </div>
-    </div>
+        <label for="province">君之省：</label>
+        <input type="text" id="province" name="province" required><br><br>
 
-    <nav>
-        <div class="nav-brand">
-            <a href="#home"><img src="logo.png" alt="大会Logo" style="height: 50px;"></a> <!-- 假设logo图片文件名为logo.png -->
-        </div>
+        <label for="city">君之名：</label>
+        <input type="text" id="city" name="city" required><br><br>
 
+        <label for="township">君之乡：</label>
+        <input type="text" id="township" name="township" required><br><br>
 
-        <ul>
-            <li><a href="#home">首页</a></li>
-            <li><a href="#about">大会介绍</a></li>
-            <li><a href="#schedule">活动安排</a></li>
-            <li><a href="#exhibitors">展商展览</a></li>
-            <li><a href="#achievements">成果展示</a></li>
-            <li><a href="#downloads">资料下载</a></li>
-            <li><a href="#news">新闻资讯</a></li>
-            <li><a href="#contact">联系我们</a></li>
-        </ul>
-        <div class="nav-login">
-            <a href="#login">登录</a> / <a href="#register">注册</a>
-        </div>
-    </nav>
-</header>
+        <label for="age">君之年：</label>
+        <input type="number" id="age" name="age" required><br><br>
 
-<section id="home">
-    <div class="hero">
-        <h1>欢迎来到西湖论剑·数字安全大会</h1>
-        <p>探索最新的数字安全技术，与行业领导者一起前进。</p>
-        <a href="#register" class="btn-primary">立即报名</a>
-    </div>
-</section>
+        <label for="occupation">君之业：</label>
+        <input type="text" id="occupation" name="occupation" required><br><br>
 
-<section id="about">
-    <h2>大会介绍</h2>
-    <p>西湖论剑·数字安全大会是国内领先的信息安全大会，集合了政府机构、公安部门、科研单位等行业精英。</p>
-</section>
-<div class="slider">
-    <div class="slides">
-        <img src="lunbo1.png" alt="大会图片1">
-        <img src="lunbo2.png" alt="大会图片2">
-        <img src="lunbo3.png" alt="大会图片3">
-        <!-- 更多图片 -->
-    </div>
+        <label for="changes">对君来说家乡最大的变化是什么：</label><br>
+        <textarea id="changes" name="changes" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="feelings">君对家乡变化的感想：</label><br>
+        <textarea id="feelings" name="feelings" rows="4" cols="50" required></textarea><br><br>
+
+        <input type="submit" value="提交">
+    </form>
 </div>
-<p>----简介：西湖论剑·数字安全大会作为链接产、教、研的平台，自2012年创办，是国内首个已举办十一周年的网络安全大会，2023年西湖论剑网络安全大会品牌升级，更名为西湖论剑·数字安全大会（以下简称“西湖论剑”）。十一届以来，大会线下参会嘉宾累计超过10000人次，线上直播观看累计超过2500万人次，已成为国内网络安全领域的一张“金名片”。历届大会期间，国家部委、省市领导，院士、知名专家和优秀企业代表齐聚杭州，共商数字时代的安全之道。西湖论剑参加的用户群体主要包含：政府机构、公安部门、信息安全科研单位、央企、金融、运营商、互联网、军工各行业信息安全决策人员、信息安全主管、CIO、媒体等。</p>
-
-<section id="schedule">
-    <h2>活动安排</h2>
-    <p>查看我们精彩纷呈的活动日程，不错过任何一场精彩演讲和展示。</p>
-    <div class="schedule-table">
-        <table>
-            <thead>
-            <tr>
-                <th>时间</th>
-                <th>活动名称</th>
-                <th>状态</th>
-                <th>操作</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>2024-03-10 10:00</td>
-                <td>开幕式</td>
-                <td>已结束</td>
-                <td><a href="#replay1" class="btn">观看回放</a></td>
-            </tr>
-            <tr>
-                <td>2024-03-11 14:00</td>
-                <td>安全技术分享</td>
-                <td>进行中</td>
-                <td><a href="#live2" class="btn btn-primary">进入直播</a></td>
-            </tr>
-            <tr>
-                <td>2024-03-12 09:00</td>
-                <td>闭幕式</td>
-                <td>未开始</td>
-                <td><a href="#subscribe3" class="btn">订购</a></td>
-            </tr>
-            <!-- 更多活动 -->
-            </tbody>
-        </table>
-    </div>
-</section>
-
-
-<section id="exhibitors">
-    <h2>展商展览</h2>
-    <img src="zhanshang1.png">
-    <img src="zhanshang2.png">
-    <p>探索参展商的创新产品和解决方案。</p>
-</section>
-
-<section id="achievements">
-    <h2>成果展示</h2>
-    <p>了解本次大会发布的新产品和新成果。</p>
-</section>
-
-<section id="downloads">
-    <h2>资料下载</h2>
-    <p>下载大会嘉宾的精彩演讲PPT和相关资料。</p>
-</section>
-
-<section id="news">
-    <h2>新闻资讯</h2>
-    <p>获取大会的最新消息和媒体报道。</p>
-</section>
-
-<section id="contact">
-    <h2>联系我们</h2>
-    <p>有任何问题或建议，请联系我们。</p>
-</section>
-
-<footer>
-    <p>&copy; 2024 西湖论剑·数字安全大会。保留所有权利。</p>
-</footer>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        let currentIndex = 0;
-        const slides = document.querySelector('.slides');
-        const images = slides.querySelectorAll('img');
-        const totalImages = images.length;
-
-        setInterval(() => {
-            currentIndex = (currentIndex + 1) % totalImages;
-            slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }, 3000); // 每3秒滑动到下一张图片
-    });
-    var loginModal = document.getElementById('loginModal');
-    var registerModal = document.getElementById('registerModal');
-
-    // 获取打开模态框的按钮元素
-    var loginBtn = document.querySelector('.nav-login a[href="#login"]');
-    var registerBtn = document.querySelector('.nav-login a[href="#register"]');
-
-    // 获取关闭模态框的按钮元素
-    var closeLogin = document.querySelector('#loginModal .close-btn');
-    var closeRegister = document.querySelector('#registerModal .close-btn');
-
-    // 点击按钮打开模态框
-    loginBtn.onclick = function() {
-        loginModal.style.display = "block";
-    }
-    registerBtn.onclick = function() {
-        registerModal.style.display = "block";
-    }
-
-    // 点击(x)关闭模态框
-    closeLogin.onclick = function() {
-        loginModal.style.display = "none";
-    }
-    closeRegister.onclick = function() {
-        registerModal.style.display = "none";
-    }
-
-    // 点击模态框外部时关闭模态框
-    window.onclick = function(event) {
-        if (event.target == loginModal) {
-            loginModal.style.display = "none";
-        } else if (event.target == registerModal) {
-            registerModal.style.display = "none";
-        }
-    }
-</script>
+    <br><br>
+    <a href="records.html">查看填写记录</a>
 </body>
 </html>
